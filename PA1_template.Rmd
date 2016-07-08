@@ -7,6 +7,7 @@ output:
 
 
 ## Loading and preprocessing the data
+'''{r}
 activity <- read.csv("C:/Users/chavezke/Desktop/Coursera/data/activity.csv")
 activity$date <- as.Date(activity$date)
 library(reshape2)
@@ -14,7 +15,7 @@ actMeltDate <- melt(activity, id.vars="date", measure.vars="steps", na.rm=FALSE)
 actCastDate <- dcast(actMeltDate, date ~ variable, sum)
 plot(actCastDate$date, actCastDate$steps, type="h", main="Histogram of Daily Steps", xlab="Date", ylab="Steps per Day", col="blue", lwd=8)
 abline(h=mean(actCastDate$steps, na.rm=TRUE), col="red", lwd=2)
-
+'''
 
 ## What is mean total number of steps taken per day?
 mean(actCastDate$steps, na.rm = TRUE)
