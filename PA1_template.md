@@ -89,7 +89,7 @@ actCastDateNoNA <- dcast(actMeltDateNoNA, date ~ variable, sum)
 ```
 
 ##Plot Histogram of Daily Steps
-```{r, echo=false}
+```{r}
 plot(actCastDateNoNA$date, actCastDateNoNA$steps, type="h", main="Histogram of Daily Steps (Removed NA Values)", xlab="Date", ylab="Steps", col="gray", lwd=8)
 abline(h=mean(actCastDateNoNA$steps), col="red", lwd=2)
 ```
