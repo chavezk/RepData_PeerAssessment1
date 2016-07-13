@@ -26,11 +26,6 @@ actMeltDate <- melt(activity, id.vars="date", measure.vars="steps", na.rm=FALSE)
 ```{r}
 actCastDate <- dcast(actMeltDate, date ~ variable, sum)
 ```
-##Plot Histogram
-```{r}
-plot(actCastDate$date, actCastDate$steps, type="h", main="Histogram of Daily Steps", xlab="Date", ylab="Steps per Day", col="blue", lwd=8)
-abline(h=mean(actCastDate$steps, na.rm=TRUE), col="red", lwd=2)
-```
 
 ##Calculate Mean
 ```{r}
