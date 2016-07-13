@@ -131,8 +131,8 @@ library(gridExtra)
 
 ##Plots by interval for weekdays and weekends
 
+![](instructions_fig/Frequency of Steps.png)<!-- -->
 
-![](RepData_PeerAssessment1/instructions_fig/Frequency of Steps.png)<!-- -->![](RepData_PeerAssessment1/instructions_fig/Frequency of Steps.png)<!-- -->
 
 ```{r}
 plot1 <- qplot(actCastWeekday$interval, actCastWeekday$steps, geom="line", data=actCastWeekday, main="Steps by Interval - Weekday", xlab="Interval ID", ylab="Number of Steps")
