@@ -50,6 +50,9 @@ actCastInt <- dcast(actMeltInt, interval ~ variable, mean)
 ```
 
 ##Plot data
+
+![](instructions_fig/Histogram of Daily Steps.png)<!-- -->
+
 ```{r}
 plot(actCastInt$interval, actCastInt$steps, type="l", main="Frequency of Steps Taken at Each Interval", xlab="Interval ID", ylab="Steps", col="orange", lwd=2)
 ```
